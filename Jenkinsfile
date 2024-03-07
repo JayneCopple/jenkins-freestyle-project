@@ -7,8 +7,6 @@ pipeline {
                 // some block
                     sh ./build.sh
                 }
-                //sh 'echo "Building..."'
-                //sh 'ls -al'
             }
         }
       stage('Test') {
