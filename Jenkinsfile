@@ -4,25 +4,25 @@ pipeline {
     stage('Build') {
             steps {
                 script {
-                // some block
+                // build script
                     sh ./build.sh
                 }
             }
         }
       stage('Test') {
             steps {
-                sh 'echo "Testing..."'
-                sh 'pwd'
-                sh 'touch testfile.txt'
-                sh 'ls -l'
+                script {
+                // test script
+                    sh ./test.sh
+                }
             }
         }
       stage('Deploy') {
             steps {
-                sh 'cat ./run.sh'
-                sh 'echo "Deploying..."'
-                sh 'mv testfile.txt /tmp'
-                sh 'ls -l /tmp'
+                script {
+                // deploy script
+                    sh ./deploy.sh
+                }
             }
         }
   }
