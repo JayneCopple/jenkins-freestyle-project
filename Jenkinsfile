@@ -3,8 +3,12 @@ pipeline {
   stages {
     stage('Build') {
             steps {
-                sh 'echo "Building..."'
-                sh 'ls -al'
+                script {
+                // some block
+                    sh ./build.sh
+                }
+                //sh 'echo "Building..."'
+                //sh 'ls -al'
             }
         }
       stage('Test') {
