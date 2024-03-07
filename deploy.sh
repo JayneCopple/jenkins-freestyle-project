@@ -1,4 +1,4 @@
-sh cat ./run.sh
-sh echo "Deploying...(deploy script)"
-sh mv testfile.txt /tmp
-sh ls -l /tmp
+cat ./run.sh
+echo "Deploying...(deploy script)"
+mv testfile.txt /tmp
+ls -l /tmp
