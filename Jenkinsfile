@@ -4,7 +4,6 @@ pipeline {
     stage('Build') {
             steps {
                 script {
-                // build script
                     sh ./build.sh
                 }
             }
@@ -12,7 +11,6 @@ pipeline {
       stage('Test') {
             steps {
                 script {
-                // test script
                     sh ./test.sh
                 }
             }
@@ -20,7 +18,6 @@ pipeline {
       stage('Deploy') {
             steps {
                 script {
-                // deploy script
                     sh ./deploy.sh
                 }
             }
